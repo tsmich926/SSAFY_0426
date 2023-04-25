@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    console.log('Hi')
+    const mypromise = () => new promise((resolve,reject) => {
+        setTimeout(function () {
+        console.log('SSAFY')
+        resolve('SSAFY')
+      }, 3000)
+    })
+
+    mypromise
+    .then((res) => {
+      console.log('Bye')
+      return A
+    })
+    ,then((res)=>{ //res === A
+      //...
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+
+
+
+
+//console.log('Hi')
+
+// setTimeout(function () {
+//   console.log('SSAFY')
+// }, 3000)
+
+// console.log('Bye')
+  
+  </script>
+</body>
+</html>
+
+<!-- const mypromise = newpromise((resolve,reject){
+  setTimeout(()=>{
+    resolve("foo");
+  },300);
+});
+
+mypromise
+.then()
+.then()
+.then(); -->
+
+
+
+const mypromise = newpromise((resolve,reject){
+  setTimeout(function()=>{
+    resolve("foo");
+  },300);
+});
+
+mypromise
+.then(console.log('Bye'))
+
+
+const mypromise = 
+  new promise(function(okFunction.errorFunction){
+    
+  })

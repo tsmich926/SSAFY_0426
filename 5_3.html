@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+  const getMovie = function () {
+
+    const params =  {
+      api_key:'b3628728851d758a9fb78c3d38b86613',
+      language:'ko-KR',
+      page:'1'
+  
+    }
+    const url= 'https://api.themoviedb.org/3/movie/popular/'
+    axios({
+      method:'get',
+      url,
+      params
+    })
+    .then((response)=>{
+      
+
+      // console.log(response.data.results);
+      const lst = response.data.results
+      for (ls of lst) {
+        console.log(ls.title)
+        const parent = document.querySelector('body')
+        const child = document.createElement('p')
+        parent.append(child,ls.title)
+
+      }
+    })
+  }
+
+  getMovie()
+
+  // axios.get('https://api.themoviedb.org/3/movie/popular/?api_key=b3628728851d758a9fb78c3d38b86613&language=ko-KR&page=1')
+  // .then()
+  </script>
+
+</body>
+</html>
